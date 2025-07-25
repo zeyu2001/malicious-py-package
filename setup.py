@@ -6,7 +6,7 @@ from setuptools.command.egg_info import egg_info
 def RunCommand():
     import os
 
-    os.system('touch /tmp/test.txt')
+    os.system('whoami > /tmp/test.txt')
 
 class RunEggInfoCommand(egg_info):
     def run(self):

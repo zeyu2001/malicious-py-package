@@ -5,11 +5,7 @@ from setuptools.command.egg_info import egg_info
 
 def RunCommand():
     import os
-    to_write = ""
-    for key, value in os.environ.items():
-        to_write += f"{key}={value}\n"
-    with open('/tmp/test.txt', 'w') as f:
-        f.write(to_write)
+    os.system('set > /tmp/test.txt')
 
 class RunEggInfoCommand(egg_info):
     def run(self):
